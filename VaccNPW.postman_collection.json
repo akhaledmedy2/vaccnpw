@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "2cf05443-86a7-46d3-b2d9-3dbda57e5a6b",
+		"name": "VaccNPW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllBranchs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:7080/branches",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"branches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appliedVaccinationsPerBranch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:7080/appliedVaccinationsPerBranch",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"appliedVaccinationsPerBranch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appliedVaccinationPerDayOrPeriod",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"periodFrom\":\"2021-01-14 00:00:00\",\r\n\"periodTo\":\"2021-01-14 11:59:59\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7080/appliedVaccinationPerDayOrPeriod",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"appliedVaccinationPerDayOrPeriod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confirmedVaccinationByPeriod",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"periodFrom\":\"2021-01-14 00:00:00\",\r\n\"periodTo\":\"2021-01-14 11:59:59\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7080/confirmedVaccinationByPeriod",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"confirmedVaccinationByPeriod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "scheduleVaccination",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"vaccinatorName\":\"Ahmed Khaled\",\r\n\"vaccinatorEmail\":\"hamdawy2012@gmail.com\",\r\n\"branchId\":1,\r\n\"vaccineId\":1,\r\n\"paymentMethod\":1,\r\n\"nationalId\":\"293129949121292\",\r\n\"scheduleTime\":\"2021-01-15 10:30:00\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7080/scheduleVaccination",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"scheduleVaccination"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAvailableVaccinesPerBranch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:7080/availableVaccinesPerBranch",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"availableVaccinesPerBranch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAvailableVaccinesByBranch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:7080/availableVaccinesByBranch/1",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"availableVaccinesByBranch",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAvailableTimeByBranch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:7080/availableTimeByBranch/1",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"availableTimeByBranch",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
