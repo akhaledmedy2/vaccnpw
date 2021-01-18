@@ -21,7 +21,7 @@ import java.util.List;
 
 @RestController
 @Scope(value = "request")
-public class ReportingEndPoints {
+public class ReportingEndPoints extends ServiceExceptionsHandling {
 
     @Autowired
     private ReportsService reportsService;

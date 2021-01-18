@@ -30,3 +30,9 @@ java -Xmx256m -jar vaccnpw-0.0.1.jar --spring.mail.username=?? , --spring.mail.p
 # Payment Methods
 # ------------ #
 CASH -> 1 , CREDIT -> 2 , FAWRY -> 3
+
+# Note :-
+Attached with the project postman collection as JSON file
+add the collection to postman to test the endpoints
+
+Unit Testing  applied only on availability endpoints and services

@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @Scope(value = "request")
-public class ScheduleVaccinationEndPoint extends ServiceExceptionsHandling{
+public class ScheduleVaccinationEndPoint extends ServiceExceptionsHandling {
 
     @Autowired
     private ScheduleVaccinationService scheduleVaccinationService;

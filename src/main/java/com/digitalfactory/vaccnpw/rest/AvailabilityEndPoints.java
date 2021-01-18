@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @Scope(value = "request")
-public class AvailabilityEndPoints extends ServiceExceptionsHandling{
+public class AvailabilityEndPoints extends ServiceExceptionsHandling {
 
     @Autowired
     private AvailabilityServices availabilityServices;

@@ -46,7 +46,7 @@ public class AvailabilityServices {
         return branchRepresentations;
     }
 
-    public List<VaccineRepresentation> getAvailableVaccinesPerBranch(){
+    public List<VaccineRepresentation> getAvailableVaccinesPerBranch() {
         List<Vaccine> vaccineBranchList = null;
         try {
             vaccineBranchList = vaccineDao.findAllByBranchVaccineQuantityGreaterThanZero();
@@ -57,14 +57,14 @@ public class AvailabilityServices {
 
         List<VaccineRepresentation> vaccineRepresentations = new ArrayList<>();
 
-        for(Vaccine vaccineBranch : vaccineBranchList){
+        for (Vaccine vaccineBranch : vaccineBranchList) {
             vaccineRepresentations.add(vaccineBranch.getVaccineRepresentation());
         }
 
         return vaccineRepresentations;
     }
 
-    public List<VaccineRepresentation> getAvailableVaccinesByBranch(long branchId){
+    public List<VaccineRepresentation> getAvailableVaccinesByBranch(long branchId) {
 
         validateInput(branchId);
 
@@ -78,14 +78,14 @@ public class AvailabilityServices {
 
         List<VaccineRepresentation> vaccineRepresentations = new ArrayList<>();
 
-        for(Vaccine vaccineBranch : vaccineBranchList){
+        for (Vaccine vaccineBranch : vaccineBranchList) {
             vaccineRepresentations.add(vaccineBranch.getVaccineRepresentation());
         }
 
         return vaccineRepresentations;
     }
 
-    public List<BranchRepresentation> getAvailableTimeForBranch(long branchId){
+    public List<BranchRepresentation> getAvailableTimeForBranch(long branchId) {
 
         List<Branch> branchList;
 
